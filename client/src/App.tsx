@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import HallDetails from "./Pages/hallDetails/HallDetails";
 import Room from "./Pages/roomDetails/Room";
 import Student from "./Pages/studentDetails/Student";
+import AddStudentForm from "./components/AddStudent";
 
 function App() {
   return (
@@ -12,10 +13,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/hall/:hallName" element={<HallDetails/>} />
-        <Route path="/hall/:hallName/:room" element={<Room/>} />
-        <Route path="/hall/:hallName/:room/:stuId" element={<Student/>} />
-        
+        <Route path="/hall/:hallName" element={<HallDetails />} />
+        <Route path="/hall/:hallName/:room" element={<Room />} />
+        <Route path="/hall/:hallName/:room/:stuId" element={<Student />} />
+        <Route path="/addStudents" element={<AddStudentForm />} />
       </Routes>
     </>
   );
