@@ -14,23 +14,23 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-lg font-bold">
+            <a href="/" className="text-2xl font-bold">
               MyLogo
             </a>
           </div>
 
           {/* Menu for larger screens */}
           <div className="hidden md:flex space-x-4">
-            <Link to="/home" className="hover:text-gray-200">
+            <Link to="/home" className="hover:text-gray-200 text-lg">
               Home
             </Link>
-            <Link to="/students" className="hover:text-gray-200">
+            <Link to="/students" className="hover:text-gray-200 text-lg">
               Students
             </Link>
-            <Link to="/addStudents" className="hover:text-gray-200">
+            <Link to="/addStudents" className="hover:text-gray-200 text-lg">
               Add Students
             </Link>
-            <Link to="/profile" className="hover:text-gray-200">
+            <Link to="/profile" className="hover:text-gray-200 text-lg">
               Profile
             </Link>
           </div>
