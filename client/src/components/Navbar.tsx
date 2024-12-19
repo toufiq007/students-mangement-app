@@ -14,9 +14,9 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold">
+            <Link to="/" className="text-2xl font-bold">
               MyLogo
-            </a>
+            </Link>
           </div>
 
           {/* Menu for larger screens */}
