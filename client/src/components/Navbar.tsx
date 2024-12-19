@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
           {/* Menu for larger screens */}
           <div className="hidden md:flex space-x-6">
             <Link
-              to="/home"
+              to="/"
               className="text-lg font-medium text-white hover:text-gray-200 transition duration-200"
             >
               Home
@@ -42,6 +42,14 @@ const Navbar: React.FC = () => {
             >
               Add Students
             </Link>
+            
+            <Link
+              to="/about"
+              className="text-lg font-medium text-white hover:text-gray-200 transition duration-200"
+            >
+              About
+            </Link>
+
             <Link
               to="/profile"
               className="text-lg font-medium text-white hover:text-gray-200 transition duration-200"

@@ -1,53 +1,53 @@
 import { Link } from "react-router-dom";
-import CurzonHall from "../assets/images/curzonHall.jpg";
+import CollegeImage from "../assets/images/curzonHall.jpg";  // Replace with your actual image
 
 const Home = () => {
   return (
-    <div className="py-10 container mx-auto px-4">
-      {/* Header */}
-      <h1 className="text-5xl font-extrabold text-center text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 mb-12">
-        Welcome to the Hall Students Management System at PTEC
-      </h1>
+    <div className="bg-gray-50 py-10 container mx-auto px-4">
+      {/* Header Section */}
+      <div className="text-center mb-10">
+        <h1 className="text-4xl font-bold text-blue-600 mb-4">
+          Welcome to the Student Management System
+        </h1>
+        <p className="text-lg text-gray-600">
+          Efficiently manage student information at Pabna Textile Engineering College.
+        </p>
+      </div>
 
-      {/* Hall Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Fiber Hall */}
-        <Link
-          to="/hall/fiber"
-          className="group bg-gradient-to-r h-[550px] from-blue-500 to-indigo-500 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-        >
-          <div className="relative w-full h-full">
-            <img
-              src={CurzonHall}
-              alt="Fiber Hall"
-              className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black to-transparent">
-              <h2 className="text-4xl font-bold text-white text-center">
-                Fiber Hall
-              </h2>
-            </div>
-          </div>
-        </Link>
+      {/* College Image */}
+      <div className="text-center mb-10">
+        <img
+          className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
+          src={CollegeImage}
+          alt="Pabna Textile Engineering College"
+        />
+      </div>
 
-        {/* Twist Hall */}
-        <Link
-          to="/hall/twist"
-          className="group bg-gradient-to-r h-[550px] from-red-500 to-pink-500 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-        >
-          <div className="relative w-full h-full">
-            <img
-              src={CurzonHall}
-              alt="Twist Hall"
-              className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black to-transparent">
-              <h2 className="text-4xl font-bold text-white text-center">
-                Twist Hall
-              </h2>
-            </div>
+      {/* Key Features Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+        <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+          <h2 className="text-2xl font-semibold text-center mb-4">Manage Students</h2>
+          <p className="text-center text-lg">
+            Add, update, and view student records easily.
+          </p>
+          <div className="mt-4 text-center">
+            <Link to="/students" className="bg-white text-blue-500 px-4 py-2 rounded-full hover:bg-blue-600 hover:text-white transition duration-300">
+              View Students
+            </Link>
           </div>
-        </Link>
+        </div>
+
+        <div className="bg-green-500 text-white p-6 rounded-lg shadow-lg hover:shadow-xl transform transition duration-300 hover:scale-105">
+          <h2 className="text-2xl font-semibold text-center mb-4">Add New Student</h2>
+          <p className="text-center text-lg">
+            Easily add new students to the system.
+          </p>
+          <div className="mt-4 text-center">
+            <Link to="/addStudents" className="bg-white text-green-500 px-4 py-2 rounded-full hover:bg-green-600 hover:text-white transition duration-300">
+              Add Student
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
