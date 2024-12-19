@@ -9,28 +9,43 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-blue-500 text-white">
+    <nav className="bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold">
+            <Link
+              to="/"
+              className="text-3xl font-extrabold text-white tracking-wide hover:text-gray-200"
+            >
               MyLogo
             </Link>
           </div>
 
           {/* Menu for larger screens */}
-          <div className="hidden md:flex space-x-4">
-            <Link to="/home" className="hover:text-gray-200 text-lg">
+          <div className="hidden md:flex space-x-6">
+            <Link
+              to="/home"
+              className="text-lg font-medium text-white hover:text-gray-200 transition duration-200"
+            >
               Home
             </Link>
-            <Link to="/students" className="hover:text-gray-200 text-lg">
+            <Link
+              to="/students"
+              className="text-lg font-medium text-white hover:text-gray-200 transition duration-200"
+            >
               Students
             </Link>
-            <Link to="/addStudents" className="hover:text-gray-200 text-lg">
+            <Link
+              to="/addStudents"
+              className="text-lg font-medium text-white hover:text-gray-200 transition duration-200"
+            >
               Add Students
             </Link>
-            <Link to="/profile" className="hover:text-gray-200 text-lg">
+            <Link
+              to="/profile"
+              className="text-lg font-medium text-white hover:text-gray-200 transition duration-200"
+            >
               Profile
             </Link>
           </div>
@@ -39,10 +54,10 @@ const Navbar: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="focus:outline-none text-white hover:text-gray-200"
+              className="focus:outline-none text-white hover:text-gray-300 transition duration-200"
             >
               <svg
-                className="w-6 h-6"
+                className="w-8 h-8"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -71,28 +86,31 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden">
-          <a href="#home" className="block px-4 py-2 text-sm hover:bg-blue-700">
+        <div className="md:hidden bg-gradient-to-r from-blue-500 to-indigo-600">
+          <Link
+            to="/home"
+            className="block px-4 py-3 text-lg text-white hover:bg-blue-700 transition duration-200"
+          >
             Home
-          </a>
-          <a
-            href="#about"
-            className="block px-4 py-2 text-sm hover:bg-blue-700"
+          </Link>
+          <Link
+            to="/students"
+            className="block px-4 py-3 text-lg text-white hover:bg-blue-700 transition duration-200"
           >
-            About
-          </a>
-          <a
-            href="#services"
-            className="block px-4 py-2 text-sm hover:bg-blue-700"
+            Students
+          </Link>
+          <Link
+            to="/addStudents"
+            className="block px-4 py-3 text-lg text-white hover:bg-blue-700 transition duration-200"
           >
-            Services
-          </a>
-          <a
-            href="#contact"
-            className="block px-4 py-2 text-sm hover:bg-blue-700"
+            Add Students
+          </Link>
+          <Link
+            to="/profile"
+            className="block px-4 py-3 text-lg text-white hover:bg-blue-700 transition duration-200"
           >
-            Contact
-          </a>
+            Profile
+          </Link>
         </div>
       )}
     </nav>
